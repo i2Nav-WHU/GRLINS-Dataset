@@ -35,3 +35,10 @@ The **TUM file** is space-separated with columns `timestamp tx ty tz qx qy qz qw
 3. Form the normalized residuals in Eq. (31) using the TDCP observations, LOS vectors, and combined geometric terms from the CSV, together with the initial-epoch attitude, relative displacements, and receiver clock-bias changes between adjacent epochs.
 4. Follow Eqs. (31)–(36) to apply graduated non-convexity with the Geman–McClure loss (GNC-GM). Initialize the attitude at the first epoch of each window from the TUM quaternion. Keep roll and pitch fixed and use the yaw from the quaternion as the initial estimate. Estimate one receiver clock-bias change per interval, initialized to zero.
 5. Compute the TDCP residuals after optimization. Classify observations using the `0.02 m` threshold and compare the results with `dd_outlier_label`.
+
+## License
+
+This dataset is licensed under the
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+See [LICENSE](LICENSE) for details.
